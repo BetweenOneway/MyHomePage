@@ -10,7 +10,7 @@ class PublicController extends Controller
 {
     public function login()
     {
-        $this->display();
+        $this->display('Public:login');
     }
 
     public function checkLogin()
@@ -19,7 +19,7 @@ class PublicController extends Controller
         $verify=$this->checkCode($code);
         if(!$verify)
         {
-            $res['status']=0;
+            $res['status']=-1;
             $res['message']="验证码错误！";
         }
         else
@@ -30,7 +30,7 @@ class PublicController extends Controller
             $return = $this->checkPassword($username,$password);
             if(!$return)
             {
-                $res['status']=0;
+                $res['status']=-1;
                 $res['message']="用户名或密码错误！";
             }
             else
@@ -43,7 +43,7 @@ class PublicController extends Controller
                 M('admin')->save($data);
                 session('admin_id',$return["id"]);
                 session('admin_username',$return["username"]);
-                $res['status']=1;
+                $res['status']=0;
                 $res['message']="登录成功！";
             }
         }

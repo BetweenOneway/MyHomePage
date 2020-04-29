@@ -13,13 +13,35 @@ class IndexController extends Controller
     {
         if(IS_POST)
         {
-            $res['status']=0;
-            $res['message']="调用changePassword";
-            $this->ajaxReturn($res);
+            $old_password=I('old_password','','md5');
+            $new_password=I('new_password','','md5');
+            $map['id']=session('admin_id');
+            //$admin=M('admin')->where($map)->find();
+            /*
+            if(false != $admin && NULL != $admin)
+            {
+                if($old_password == $admin['password'])
+                {
+                    $result=M('admin')->where($map)->setField('password',$new_password);
+                    if(false == $result)
+                    {
+                        $res['status']=-1;
+                        $res['message']="更改失败";
+                        $this->ajaxReturn($res);
+                    }
+                    else
+                    {
+                        $res['status']=0;
+                        $res['message']="更改成功";
+                        $this->ajaxReturn($res);
+                    }
+                }
+            }
+            */
         }
         else
         {
-            $this->display();
+            $this->display("Index:changePassword");
         }
     }
 }
