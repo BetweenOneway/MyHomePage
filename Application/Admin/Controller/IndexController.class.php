@@ -16,8 +16,8 @@ class IndexController extends Controller
             $old_password=I('old_password','','md5');
             $new_password=I('new_password','','md5');
             $map['id']=session('admin_id');
-            //$admin=M('admin')->where($map)->find();
-            /*
+            $admin=M('admin')->where($map)->find();
+            
             if(false != $admin && NULL != $admin)
             {
                 if($old_password == $admin['password'])
@@ -37,7 +37,6 @@ class IndexController extends Controller
                     }
                 }
             }
-            */
         }
         else
         {
