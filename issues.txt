@@ -1,0 +1,13 @@
+/APP/index.php/Admin/Index/changePassword.html
+/APP/index.php/Admin/Index/changePassword.html";
+
+系统第二次发请求至后端就是这个url
+"/APP/Public/js/hplus.js?v=2.2.0"
+ThinkPHP报异常的原因是因为在目录下没有这个JS，
+hplus.js
+这个JS是header.html要用的
+
+为什么在少了JS，会往后台发送请求呢？
+
+
+"/APP/index.php/Admin/Index/skin-config.html"
