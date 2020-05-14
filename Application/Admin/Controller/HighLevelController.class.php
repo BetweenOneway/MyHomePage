@@ -8,10 +8,10 @@ class HighLevelController extends BaseController {
      * 列表
      */
     public function lists(){
-        $keyword = I('keyword','','trim');      //过滤开头结尾空格
+        $keyword = I('keyword','','trim');     
         if($keyword){
             $map['high_name'] = array('like',"%$keyword%");//模糊查询
-            $this->assign('keyword',$keyword);  //输出数据
+            $this->assign('keyword',$keyword);  
         }
         $high_level = M('high_level');
         $count  = $high_level->count();         //high_level表总数据量
