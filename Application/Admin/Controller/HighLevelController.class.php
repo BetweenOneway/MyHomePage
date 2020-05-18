@@ -46,7 +46,6 @@ class HighLevelController extends BaseController {
                 $this->error('添加失败');
             }
         }else{
-            /**id存在是编辑的情况，需要获取高级分类**/
             $map['id']  = $id = I('id',0,'int');
             if($id){
                 $high_level = $high_level->where($map)->find(); //查找高级分类
