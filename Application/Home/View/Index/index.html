@@ -1,168 +1,176 @@
-<include file="Common/header" />
-<include file="Common/top" />
-
-<div class="box l-article clearfix">
-    <div class="l-article_l">
-        <div class="box-leftbar" monkey="leftbar">
-            <div class="box-leftbar_inner">
-                <div monkey="service">
-                    <foreach name="left_array" item="vo" key="key">
-                        <dl class="corner box-sidebar">
-                            <dt class="m"><span class="box-sidebar_title"><a href="javascript:;">{$key}</a></span></dt>
-                            <dd class="m span-rows box-sidebar_content">
-                                <volist name="vo" id="left">
-                                    <span><a href="{:U('more',array('middle_id'=>$left['id']))}">{$left.middle_name}</a></span>
-                                </volist>
-                            </dd>
-                        </dl>
-                    </foreach>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        
+        <title>My Home Page</title>
+        <meta name="Viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/bootstrap-4.6.0/dist/css/bootstrap.css" />
+        <!--在我自己电脑的fireFox上font awesome无法正常显示-->
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/font-awesome-4.7.0/css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/metisMenu.css" />
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/cssmain.css"/>
+    </head>
+    <body>
+        <header class="header-transparent">
+            <div class="container-fluid wrapper">
+                <div class="row align-items-center">
+                    <!--logo-->
+                    <div class="col-xl-3 col-lg-6 col-md-11 col-9">
+                        <a class="image-fluid" href="#"><img src="__PUBLIC__/assets/img/logo/logo-02.png"></a>
+                    </div>
+                    <!--menu-->
+                    <div class="col-xl-6 d-none d-xl-block">
+                        <!--这个居中是指在col中居中-->
+                        <div class="main-menu text-center">
+                            <nav>
+                                <ul>
+                                    <li><a href="index.html">Home<span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="index.html">Modules<span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="index.html">Blog<span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
+                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--sign in/up-->
+                    <div class="col-xl-3 col-lg-6 col-md-1 col-3">
+                        <div class="header-sign d-lg-flex align-items-center justify-content-between">
+                            <div class="d-none d-lg-block">
+                                <a class="c-btn btn-round" style="margin-right: 10px;">sign in<span class="fa fa-user-circle"></span></a>
+                                <a class="c-btn btn-round">sign up<span class="fa fa-user-circle"></span></a>
+                            </div>
+                            <div id="hamburger-menu" class="d-xl-none d-lg-inline-block">
+                                <a href=""><img src="__PUBLIC__/assets/img/icon/bar.png"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="l-article_r">
-        <!--热门网址-->
-        <div class="corner box-hot" monkey="hot">
-            <div class="m span-rows box-hot_content">
-                <foreach name="hot_array" item="vo">
-                    <span><a href="{$vo.href}" <eq name="vo.is_recommend" value="1">class="recommend"</eq> >{$vo.title}</a></span>
-                </foreach>
-            </div>
-        </div>
-        <!--热门网址结束-->
-
-        <!--广告位-->
-        <div class="span-rows box-adbar" monkey="ad">
-            <foreach name="ad_array" item="vo">
-                <span><a href='{$vo.href}' target='_blank'>{$vo.title}</a></span>
-            </foreach>
-        </div>
-        <!--广告位结束-->
-
-        <!-- 右侧分类 开始 -->
-        <div class="box-sort" monkey="cool">
-            <ul class="m span-rows box-sort_content">
-                <foreach name="right_array" item="vo" key="key" >
-                    <li>
-                        <span class="box-sort_title"><a href="{:U('more',array('middle_id'=>$key))}" >{$key|get_middle_name_by_id}</a></span>
-                        <span class="box-sort_more"><a href="{:U('more',array('middle_id'=>$key))}" >更多&gt;&gt;</a></span>
-                        <volist name="vo" id="data">
-                            <span><a href="{$data.href}">{$data.title}</a></span>
-                        </volist>
-                    </li>
-                </foreach>
-                <!--以下数据是为演示界面效果而生成，实际应用中可去掉-->
-                <li>
-                    <span class="box-sort_title"><a href="news.htm">新 闻</a></span>
-                    <span class="box-sort_more"><a href="news.htm">更多&gt;&gt;</a></span>
-                    <span><a href="http://news.sina.com.cn/">新浪新闻</a></span>
-                    <span><a href="http://news.sohu.com/">搜狐新闻</a></span>
-                    <span><a href="http://www.zaobao.com/">联合早报</a></span>
-                    <span><a href="http://cn.reuters.com/">路透中文网</a></span>
-                    <span><a href="http://www.huanqiu.com/">环球网</a></span>
-                    <span><a href="http://news.100daohang.cn/">今日新闻</a></span>
-                </li>
-                <li><span class="box-sort_title"><a href="stocknew.htm">财 经</a></span>
-                    <span class="box-sort_more"><a href="stocknew.htm">更多&gt;&gt;</a></span>
-                    <span><a href="http://www.eastmoney.com/">东方财富</a></span>
-                    <span><a href="http://finance.sina.com.cn/">新浪财经</a></span>
-                    <span><a href="http://www.jrj.com.cn/">金融界</a></span>
-                    <span><a href="http://www.1234567.com.cn/">天天基金</a></span>
-                    <span><a href="http://www.stockstar.com/">证券之星</a></span>
-                    <span><a href="http://business.sohu.com/">搜狐财经</a></span>
-                </li>
-                <li><span class="box-sort_title"><a href="gouwu.htm">购 物</a></span>
-                    <span class="box-sort_more"><a href="gouwu.htm">更多&gt;&gt;</a></span>
-                    <span><a href="http://ai.taobao.com">淘宝特卖</a></span>
-                    <span><a href="http://www.amazon.cn">亚马逊</a></span>
-                    <span><a href="http://p.yiqifa.com" class="tc-green">蘑菇街</a></span>
-                    <span><a href="http://p.yiqifa.com">1号店</a></span>
-                    <span><a href="http://p.yiqifa.com">当当网</a></span>
-                </li>
-                <li><span class="box-sort_title"><a href="shequ.htm">社 交</a></span>
-                    <span class="box-sort_more"><a href="shequ.htm">更多&gt;&gt;</a></span>
-                    <span><a href="http://weibo.com/">新浪微博</a></span>
-                    <span><a href="http://t.sohu.com/">搜狐微博</a></span>
-                    <span><a href="http://tieba.baidu.com/">百度贴吧</a></span>
-                    <span><a href="http://qzone.qq.com/">QQ空间</a></span>
-                    <span><a href="http://www.tianya.cn/">天涯社区</a></span>
-                    <span><a href="http://www.mop.com/">猫扑</a></span>
-                    <span><a href="http://www.renren.com/">人人网</a></span>
-                </li>
-                <li><span class="box-sort_title"><a href="shequ.htm">社 交</a></span>
-                    <span class="box-sort_more"><a href="shequ.htm">更多&gt;&gt;</a></span>
-                    <span><a href="http://weibo.com/">新浪微博</a></span>
-                    <span><a href="http://t.sohu.com/">搜狐微博</a></span>
-                    <span><a href="http://tieba.baidu.com/">百度贴吧</a></span>
-                    <span><a href="http://qzone.qq.com/">QQ空间</a></span>
-                    <span><a href="http://www.tianya.cn/">天涯社区</a></span>
-                    <span><a href="http://www.mop.com/">猫扑</a></span>
-                    <span><a href="http://www.renren.com/">人人网</a></span>
-                </li>
-            </ul>
-
-            <!--图片区-->
-            <ul class="m span-rows box-sort_content">
-                <h3> <span><a>休闲娱乐</a></span></h3>
-                <div class="flexslider carousel">
-                    <ul class="slides">
-                        <foreach name="pic_array" item="vo">
-                            <li>
-                                <a href="{$vo.href}"><img src="{$vo.picture|get_cover_url}"/></a>
-                                <span>{$vo.title}</span>
-                            </li>
-                        </foreach>
+            <aside class="slide-bar">
+                <div class="slide-bar-container">
+                <div class="close-mobile-menu">
+                    <a href="javascript:void(0)"><span class="fa fa-times"></span></a>
+                </div>
+                <nav class="side-mobile-menu">
+                    <ul id="mobile-menu-active">
+                        <li class="has-dropdown">
+                            <a href="index.html">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Home style 1</a></li>
+                                <li><a href="index.html">Home Style 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <!--这里的a标签必须有href，如果没有样式会被Bootstrap样式取代，导致颜色继承 显示不出来
+                            或者通过提升样式等级来显示，如加!important等-->
+                            <a href="index.html">Course</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Course</a></li>
+                                <li><a href="">Course list</a></li>
+                                <li><a href="">Course Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="index.html">Events</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Events list</a></li>
+                                <li><a href="">Event Details</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </div>
-                <!--轮播展示-->
-                <script type="text/javascript" src="__PUBLIC__/js/jquery.flexslider-min.js"></script>
-                <script type="text/javascript">
-                    $(function() {
-                        $(".flexslider").flexslider({
-                            animation: "slide",
-                            animationLoop: false,
-                            itemWidth: 210,
-                            itemMargin: 5,
-                            minItems: 5,
-                            maxItems: 4,
-                            animationLoop:true,
-                            slideshowSpeed:3000,
-                            // pausePlay: true
-                        });
-                    });
-                </script>
-            </ul>
-        </div>
-        <!-- 右侧分类 结束 -->
-
-        <!--底部开始-->
-        <div class="box box-bottom" monkey="footer">
-            <div class="box-tools">
-                <ul class="m span-rows box-tools_content">
-                    <foreach name="bottom_array" item="vo" key="key">
-                        <li>
-                            <span class="box-tools_title"><a href="javascript:;">{$key}</a></span>
-                            <span class="box-tools_more"><a href="javascript:;">更多&gt;&gt;</a></span>
-                            <volist name="vo" id="bottom">
-                                <span><a href="{$bottom.href}">{$bottom.title}</a></span>
-                            </volist>
-                        </li>
-                        <!--以下数据是为演示界面效果而生成，实际应用中可去掉-->
-                        <li>
-                            <span class="box-tools_title"><a href="javascript:;">软件专区</a></span>
-                            <span class="box-tools_more"><a href="javascript:;">更多&gt;&gt;</a></span>
-                            <span><a href="qq.htm">腾讯QQ</a></span>
-                            <span><a href="http://clk.uunt.com/link/172046/">PPTV</a></span>
-                            <span><a href="http://dl.xunlei.com/">迅雷</a></span>
-                            <span><a href="http://clk.uunt.com/link/172478/">金山毒霸</a></span>
-                            <span><a href="http://clk.uunt.com/link/155738/">搜狐影音</a></span>
-                        </li>
-                    </foreach>
-                </ul>
+                </nav>
             </div>
-        </div>
-        <!--底部结束-->
-    </div>
-</div>
-<include file="Common/footer"/>
-
+            </aside>
+        </header>
+        <main>
+            <div class="course-area blue-dark-bg slider-height single-slider d-flex">
+                <div class="container wrapper">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+                            <div class="section-title text-center">
+                                <h2><span class="fa fa-hand-o-right" style="margin-right:10px;"></span>
+                                    功能区
+                                    <span class="fa fa-hand-o-left" style="margin-left:10px;"></span></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="course-wrapper">
+                                <div class="course-hover-img">
+                                    <img src="__PUBLIC__/assets/img/course/c-03.png" alt="">
+                                </div>
+                                <div class="course-text-area">
+                                    <div class="course-icon">
+                                        <span class="fa fa-compass"></span>
+                                    </div>
+                                    <h4>网站导航</h4>
+                                    <span>Navgation</span>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn"><span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="course-wrapper">
+                                <div class="course-hover-img">
+                                    <img src="__PUBLIC__/assets/img/course/c-03.png" alt="">
+                                </div>
+                                <div class="course-text-area">
+                                    <div class="course-icon">
+                                        <span class="fa fa-file-text"></span>
+                                    </div>
+                                    <h4>云笔记</h4>
+                                    <span>Cloud Note</span>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn"><span class="fa fa-long-arrow-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--页面底部-->
+            <footer class="footer-area">
+                <div class="container">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+                            <div class="footer-logo">
+                                <a href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-12">
+                            <div class="footer-social-icon text-right">
+                                <a class="active" href="#"><span class="fa fa-weibo"></span>Weibo</a>
+                                <a href="#"><span class="fa fa-wechat"></span>WeChat</a>
+                                <a href="#"><span class="fa fa-qq"></span>QQ</a>
+                                <a href="#"><span class="fa fa-envelope-o"></span>E-Mail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="copyright-area text-center">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="copyright-text">
+                                    <p>
+                                        Copyright © 2021 Loop All Rights Reserved
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="__PUBLIC__/assets/js/jQuery-3.5.0.js"></script>
+        <script src="__PUBLIC__/assets/js/metisMenu.min.js"></script>
+        <script src="__PUBLIC__/assets/js/main.js"></script>
+    </body>
+</html>
