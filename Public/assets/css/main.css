@@ -261,6 +261,7 @@ a:focus,a:hover {
 }
 .course-wrapper:hover{
     border:0;
+    cursor:pointer;
 }
 .course-wrapper:hover .course-hover-img{
     opacity:1;
