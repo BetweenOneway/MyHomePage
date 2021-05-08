@@ -5,16 +5,30 @@
         <title>Learn Editor.md</title>
         <link rel="stylesheet" href="__PUBLIC__/assets/editormd/css/editormd.css"/>
         <script src="__PUBLIC__/assets/js/jQuery-3.5.0.js"></script>
+        
+
+        <link href="__PUBLIC__/css/module.css" rel="stylesheet"/>
+
+        <link href="__PUBLIC__/css/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+        <!--这个引入有冲突，会导致预览界面出现个圆的关闭按钮-->
+        <link href="__PUBLIC__/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+        <link href="__PUBLIC__/css/animate.css" rel="stylesheet">
+        <!--这个引入有冲突，会导致左侧编辑栏左侧和上方有白色边框-->
+        <link href="__PUBLIC__/css/admin-style.css?v=2.2.0" rel="stylesheet">
+
         <script src="__PUBLIC__/assets/editormd/editormd.js"></script>
     </head>
     <body>
+        <include file="Admin@Common/nav-header"/>
+        
         <div id="test-editormd"></div>
         <script type="text/javascript">
             $(function() {
                 var testEditor = editormd("test-editormd", {
                         //width: "90%",
                         height: 740,
-                        path : '__PUBLIC__/assets/editormd/lib/',//目录要存在不然会出现一直在加载的问题
+                        path : '__PUBLIC__/assets/editormd/lib/',//目录要存在不然会出现一直在加载的问题,指定的是lib路径
                         theme : "dark",
                         previewTheme : "dark",
                         editorTheme : "pastel-on-dark",
