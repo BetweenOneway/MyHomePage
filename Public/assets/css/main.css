@@ -359,3 +359,7 @@ a:focus,a:hover {
     color:#94A7B5;
     margin-bottom: 0px;
 }
+
+.editor {
+    position:relative;
+}
