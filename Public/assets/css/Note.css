@@ -1,0 +1,9 @@
+.wrapper {
+    width:75%;
+    margin:0 auto;
+    max-width:90em;
+}
+
+.blue-dark-bg {
+    background-color: #0E1851;
+}

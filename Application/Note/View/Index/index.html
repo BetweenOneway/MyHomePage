@@ -8,15 +8,15 @@
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/metisMenu.css" />
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/main.css"/>
-        <link href="__PUBLIC__/css/admin-style.css?v=2.2.0" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/Note.css" />
 
         <script src="__PUBLIC__/assets/js/jQuery-3.5.0.js"></script>
         <script src="__PUBLIC__/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="__PUBLIC__/assets/editormd/editormd.js"></script>
+        <script src="__PUBLIC__/assets/js/metisMenu.min.js"></script>
     </head>
     <body>
-        <header>
+        <header class="blue-dark-bg">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-xl-3">
@@ -38,43 +38,79 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-1">
-                         <!--目录-->
-                        <nav class="navbar-default navbar-static-side" role="navigation">
-                            <div class="sidebar-collapse">
-                                <ul class="nav" id="side-menu">
-                                    <li class="nav-header" style="padding: 25px 20px;">
-                                        <div class="dropdown profile-element">
-                                            <span>
-                                                <img alt="image" class="img-circle" height="60px" src="__PUBLIC__/images/profile_small.jpg" />
-                                            </span>
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                                                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.admin_username}</strong>
-                                                </span>  <span class="text-muted text-xs block"><eq name="Think.session.admin_id" value="1">超级管理员<else/>管理员</eq> <b class="caret"></b></span> </span>
-                                            </a>
-                                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                                <li><a href="{:U('Index/changePassword')}">修改密码</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="{:U('Public/logout')}">安全退出</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="logo-element">
-                                            导航
-                                        </div>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#"><i class="fa fa-edit" style="width: 18px"></i> <span class="nav-label">管理</span> <span class="fa arrow"></span></a>
-                                        <ul class="nav nav-second-level">
-                                            <li><a href="{:U('HighLevel/lists')}">高级分类</a></li>
-                                            <li><a href="{:U('MiddleLevel/lists')}">中级分类</a></li>
-                                            <li><a href="{:U('ElementaryLevel/lists')}">初级分类</a></li>
-                                            <li><a href="{:U('Datalist/lists')}">数据管理</a></li>
-                                            <li><a href="{:U('Hot/lists')}">热门管理</a></li>
-                                        </ul>
-                                    </li>
+                      <!--目录-->
+                      <nav class="sidebar-nav">
+                        <ul class="metismenu" id="menu1">
+                          <li>
+                            <a class="has-arrow" href="#">
+                              <span class="fa fa-fw fa-github fa-lg"></span>
+                              metisMenu
+                            </a>
+                            <ul>
+                              <li>
+                                <a href="https://github.com/onokumus/metisMenu">
+                                  <span class="fa fa-fw fa-code-fork"></span> Fork
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://github.com/onokumus/metisMenu">
+                                  <span class="fa fa-fw fa-star"></span> Star
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://github.com/onokumus/metisMenu/issues">
+                                  <span class="fa fa-fw fa-exclamation-triangle"></span> Issues
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 0</a>
+                            <ul>
+                              <li><a href="#">item 0.1</a></li>
+                              <li><a href="#">item 0.2</a></li>
+                              <li><a href="https://onokumus.com">onokumus</a></li>
+                              <li><a href="#">item 0.4</a></li>
+                            </ul>
+                          </li>
+                          <li id="removable">
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 1</a>
+                            <ul>
+                              <li><a href="#">item 1.1</a></li>
+                              <li><a href="#">item 1.2</a></li>
+                              <li class="mm-active">
+                                <a class="has-arrow" href="#" aria-expanded="true">Menu 1.3</a>
+                                <ul>
+                                  <li><a href="#">item 1.3.1</a></li>
+                                  <li><a href="#">item 1.3.2</a></li>
+                                  <li><a href="#">item 1.3.3</a></li>
+                                  <li><a href="#">item 1.3.4</a></li>
                                 </ul>
-                            </div>
-                        </nav>
+                              </li>
+                              <li><a href="#">item 1.4</a></li>
+                              <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">Menu 1.5</a>
+                                <ul>
+                                  <li><a href="#">item 1.5.1</a></li>
+                                  <li><a href="#">item 1.5.2</a></li>
+                                  <li><a href="#">item 1.5.3</a></li>
+                                  <li><a href="#">item 1.5.4</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a class="has-arrow" href="#" aria-expanded="false">Menu 2</a>
+                            <ul>
+                              <li><a href="#">item 2.1</a></li>
+                              <li><a href="#">item 2.2</a></li>
+                              <li><a href="#">item 2.3</a></li>
+                              <li><a href="#">item 2.4</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                      
                     </div>
                     <div class="col-xl-1">
                         <!--文件夹内容-->
@@ -138,5 +174,10 @@
             
             
         </main>
+        <script>
+          $(function () {
+              $('#menu1').metisMenu({ toggle: false });
+          });
+        </script>
     </body>
 </html>
