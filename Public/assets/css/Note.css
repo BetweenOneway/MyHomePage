@@ -5,5 +5,55 @@
 }
 
 .blue-dark-bg {
-    background-color: #0E1851;
+    background-color: #FAF1E6;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.new-file {
+    display: block;
+    position:relative;
+    padding:10px 0;
+}
+
+.btn-new-file {
+    margin:0 auto;
+    display:block;
+}
+
+.sidebar-nav a:hover {
+    text-decoration: none;
+}
+.sidebar-nav {
+    background:#FAF1E6;
+    position: relative;
+}
+.sidebar-nav ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.sidebar-nav .metismenu a {
+    display:block;
+    position: relative;
+    padding:13px 15px;
+}
+/*各级菜单的缩进*/
+.sidebar-nav .metismenu ul a {
+    padding: 10px 15px 10px 30px;
+}
+.sidebar-nav .metismenu ul ul a {
+    padding: 10px 15px 10px 45px;
+}
+.sidebar-nav .metismenu a:not(.has-arrow):active ,
+.sidebar-nav .metismenu a:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+    background: #3EDBF0;
+}
+
+.md-editor {
+    position:relative;
 }
