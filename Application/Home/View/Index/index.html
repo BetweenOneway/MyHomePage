@@ -1,176 +1,310 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        
-        <title>My Home Page</title>
-        <meta name="Viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/bootstrap/css/bootstrap.min.css" />
-        <!--在我自己电脑的fireFox上font awesome无法正常显示-->
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/font-awesome/css/font-awesome.css" />
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/metisMenu.css" />
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/main.css"/>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>OneWay - My dream set sail from here</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/assets/img/favicon.ico">
+        <link rel="stylesheet" href="__PUBLIC__/assets/bootstrap-4.6.0/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/animate.min.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/nice-select.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/font-awesome-4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/metisMenu.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/meanmenu.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/slick.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/home.css">
     </head>
     <body>
-        <header class="header-transparent">
-            <div class="container-fluid wrapper">
-                <div class="row align-items-center">
-                    <!--logo-->
-                    <div class="col-xl-3 col-lg-6 col-md-11 col-9">
-                        <a class="image-fluid" href="#"><img src="__PUBLIC__/assets/img/logo/logo-02.png"></a>
-                    </div>
-                    <!--menu-->
-                    <div class="col-xl-6 d-none d-xl-block">
-                        <!--这个居中是指在col中居中-->
-                        <div class="main-menu text-center">
-                            <nav>
-                                <ul>
-                                    <li><a href="index.html">Home<span class="fa fa-angle-down"></span></a></li>
-                                    <li><a href="index.html">Modules<span class="fa fa-angle-down"></span></a></li>
-                                    <li><a href="index.html">Blog<span class="fa fa-angle-down"></span></a></li>
-                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
-                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
-                                    <li><a href="index.html">About<span class="fa fa-angle-down"></span></a></li>
-                                </ul>
-                            </nav>
+        <header class="header-transparent header-transparent-02">
+            <div id="sticky-header" class="main-menu-area menu-padding pl-55 pr-55">
+                <div class="container custom-container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-6 col-md-11 col-9">
+                            <div class="logo">
+                                <a class="img-fluid" href="index.html"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt="" /></a>
+                            </div>
                         </div>
-                    </div>
-                    <!--sign in/up-->
-                    <div class="col-xl-3 col-lg-6 col-md-1 col-3">
-                        <div class="header-sign d-lg-flex align-items-center justify-content-between">
-                            <div class="d-none d-lg-block">
-                                <a class="c-btn btn-round" style="margin-right: 10px;">sign in<span class="fa fa-user-circle"></span></a>
-                                <a class="c-btn btn-round" href="{:U('Admin/Public/login')}">sign up<span class="fa fa-user-circle"></span></a>
+                        <!--这里的col-lg-6实际上没啥用了，因为只有xl的才会显示-->
+                        <div class="col-xl-6 col-lg-6 d-none d-xl-block">
+                            <div class="main-menu main-menu-02 text-center">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active"><a href="index.html"></a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
-                            <div id="hamburger-menu" class="d-xl-none d-lg-inline-block">
-                                <a href=""><img src="__PUBLIC__/assets/img/icon/bar.png"></a>
-                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-1 col-3">
+                            <div class="header-02-right d-lg-flex align-items-center justify-content-between">
+                                <!--这里原来有个header-sign类没啥效果-->
+                                <div class="d-none d-lg-block">
+                                    <a class="c-btn btn-round mr-10" href="contact.html">登 录 <i class="fa fa-user-circle"></i></a>
+                                    <a class="c-btn btn-round active" href="contact.html">注 册 <i class="fa fa-user-circle"></i></a>
+                                </div>
+                                <!--小屏幕下的菜单栏显示 汉堡包-->
+                                <div class="hamburger-menu d-xl-none d-lg-inline-block">
+                                    <a href="#"><img src="__PUBLIC__/assets/img/icon/bar.png" alt=""></a>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <aside class="slide-bar">
-                <div class="slide-bar-container">
-                    <div class="close-mobile-menu">
-                        <a href="javascript:void(0)"><span class="fa fa-times"></span></a>
-                    </div>
-                    <nav class="side-mobile-menu">
-                        <ul id="mobile-menu-active">
-                            <li class="has-dropdown">
-                                <a href="index.html">Home</a>
-                                <ul class="sub-menu">
-                                    <li><a href="index.html">Home style 1</a></li>
-                                    <li><a href="index.html">Home Style 2</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown">
-                                <!--这里的a标签必须有href，如果没有样式会被Bootstrap样式取代，导致颜色继承 显示不出来
-                                或者通过提升样式等级来显示，如加!important等-->
-                                <a href="index.html">Course</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">Course</a></li>
-                                    <li><a href="">Course list</a></li>
-                                    <li><a href="">Course Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="index.html">Events</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">Events list</a></li>
-                                    <li><a href="">Event Details</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
         </header>
-        <main>
-            <div class="course-area blue-dark-bg slider-height single-slider d-flex">
-                <div class="container wrapper">
-                    <div class="row">
-                        <div class="col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
-                            <div class="section-title text-center">
-                                <h2><span class="fa fa-hand-o-right" style="margin-right:10px;"></span>
-                                    功能区
-                                    <span class="fa fa-hand-o-left" style="margin-left:10px;"></span></h2>
-                            </div>
-                        </div>
+        <!--side-bar的显示控制是通过position+right来控制的，默认情况下side-bar会在据右侧-370px处，又是aside标签，根本不会显示-->
+        <!--当点击了hambeger menu之后会给aside标签新增一个show 组合效果就是使right=0-->
+        <!--移动菜单项不能在container之内，否则没有从屏幕右侧出现的感觉，会有点突兀-->
+        <aside class="slide-bar">
+            <!--关闭按钮-->
+            <div class="close-mobile-menu">
+                <a href="javascript:void(0);"><i class="fa fa-times"></i></a>
+            </div>
+            <!--没理解为什么要有这个，只有在点击了hambeger menu之后屏幕变宽才会显示-->
+            <!--
+            <div class="offset-sidebar">
+                <div class="offset-widget offset-logo mb-30">
+                    <a href="index.html">
+                        <img src="assets/img/logo/logo-02.png" alt="logo">
+                    </a>
+                </div>
+                <div class="offset-widget mb-40">
+                    <div class="info-widget">
+                        <h4 class="offset-title mb-20">About Us</h4>
+                        <p class="mb-30">
+                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
+                        was born and will give you a complete account of the system and expound the actual teachings of
+                        the great explore
+                        </p>
+                        <a class="c-btn btn-round-02" href="contact.html">Contact Us</a>
                     </div>
-                    <div class="row no-gutters">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="course-wrapper">
-                                <div class="course-hover-img">
-                                    <img src="__PUBLIC__/assets/img/course/c-03.png" alt="">
-                                </div>
-                                <div class="course-text-area">
-                                    <div class="course-icon">
-                                        <span class="fa fa-compass"></span>
-                                    </div>
-                                    <h4>网站导航</h4>
-                                    <span>Navgation</span>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn"><span class="fa fa-long-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="course-wrapper">
-                                <div class="course-hover-img">
-                                    <img src="__PUBLIC__/assets/img/course/c-03.png" alt="">
-                                </div>
-                                <div class="course-text-area">
-                                    <div class="course-icon">
-                                        <span class="fa fa-file-text"></span>
-                                    </div>
-                                    <h4><a href="{:U('Note/Index/index')}">云笔记</a></h4>
-                                    <span><a href="{:U('Note/Index/index')}">Cloud Note</a></span>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn"><span class="fa fa-long-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+                </div>
+                <div class="offset-widget mb-30 pr-10">
+                    <div class="info-widget info-widget2">
+                        <h4 class="offset-title mb-20">Contact Info</h4>
+                        <p> <i class="fa fa-address-book"></i> 23/A, Miranda City Likaoli Prikano, Dope</p>
+                        <p> <i class="fa fa-phone"></i> +0989 7876 9865 9 </p>
+                        <p> <i class="fa fa-envelope-open"></i> info@example.com </p>
                     </div>
                 </div>
             </div>
-            <!--页面底部-->
-            <footer class="footer-area">
+            -->
+            <!--side-mobile-menu默认的display=none，只有在一定的屏幕宽度下才显示，通过媒体查询控制-->
+            <!--通过MetisMenu 实现-->
+            <nav class="side-mobile-menu">
+                <ul id="mobile-menu-active">
+                    <li class="has-dropdown">
+                        <a href="index.html">Home</a>
+                        <ul class="sub-menu">
+                            <li><a href="index.html">Home Style 1</a></li>
+                            <li><a href="index-2.html">Home Style 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Courses</a>
+                        <ul class="sub-menu">
+                            <li><a href="courses.html">Course</a>
+                            <li><a href="courses -2.html">Course List</a>
+                            <li><a href="courses-details.html">Course Details</a>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">Events</a>
+                        <ul class="sub-menu">
+                            <li><a href="events.html">Events List</a></li>
+                            <li><a href="events-details.html">Events Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">Blogs</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog-grid.html">Blog Grid</a></li>
+                            <li><a href="blog-side.html">Blog Sidebar</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team-details.html">Team Details</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <!--实现当side-mobile-menu显示的时候，点击空白处关闭menu的功能-->
+        <div class="body-overlay"></div>
+
+        <main>
+            <section class="hero-area hero-02-area pos-rel blue-dark-bg">
+                <div class="slider-img d-none d-md-block">
+                    <img class="img-fluid" src="__PUBLIC__/assets/img/slider/slider2.png" alt="">
+                </div>
+
+                <div class="hero-slider">
+                    <div class="slider-actives">
+                        <div class="single-slider slider-height slider-height-02 d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-9">
+                                        <div class="hero-content hero-02-content mt-80">
+                                            <div class="hero-slider-caption">
+                                                <ul class="catlist ml-10">
+                                                    <li><a href="#">Imagine it</a></li>
+                                                    <li><a href="#">Make it</a></li>
+                                                    <li><a href="#">Optimize it</a></li>
+                                                </ul>
+                                                <h2 data-animation="fadeInUp" data-delay=".7s">在线云笔记</h2>
+                                                <p>点滴记录美好生活</p>
+                                                <a class="c-btn btn-round-02" href="about.html">开 始 <i class="fa fa-long-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Popular Categories-->
+            <div class="course-cat-area-02 blue-dark-bg2 pt-65 pb-100">
                 <div class="container">
-                    <div class="row no-gutters align-items-center">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                            <div class="section-title section-title-white text-center mb-85">
+                                <h2>Function Categories</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters cat-row">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="cat-wrapper-02">
+                                <!--鼠标经过时的背景图片-->
+                                <div class="course-cat-img">
+                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                                </div>
+                                <!--course内容 非鼠标经过情况下的显示-->
+                                <div class="course-cat-text course-cat-02-text text-center">
+                                    <div class="course-icon mb-25">
+                                        <i class="fa fa-paint-brush"></i>
+                                    </div>
+                                    <h4><a href="">云 笔 记</a></h4>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="cat-wrapper-02">
+                                <div class="course-cat-img">
+                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                                </div>
+                                <div class="course-cat-text course-cat-02-text text-center">
+                                    <div class="course-icon mb-25">
+                                        <i class="fa fa-compass"></i>
+                                    </div>
+                                    <h4><a href="">导 航</a></h4>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="cat-wrapper-02">
+                                <div class="course-cat-img">
+                                    <a href="courses-details.html"><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                                </div>
+                                <div class="course-cat-text course-cat-02-text text-center">
+                                    <div class="course-icon mb-25">
+                                        <i class="fa fa-bug"></i>
+                                    </div>
+                                    <h4><a href="courses-details.html">爬 虫</a></h4>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="cat-wrapper-02">
+                                <div class="course-cat-img">
+                                    <a href="courses-details.html"><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                                </div>
+                                <div class="course-cat-text course-cat-02-text text-center">
+                                    <div class="course-icon mb-25">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <h4><a href="courses-details.html">开 发 中</a></h4>
+                                    <div class="course-arrow-btn">
+                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--页脚-->
+            <footer class="footer-area pt-65 pb-45 blue-soft-bg3">
+                <div class="container">
+                    <div class="row mb-20 no-gutters align-items-center">
                         <div class="col-xl-4 col-lg-4 col-md-4 col-12">
                             <div class="footer-logo">
                                 <a href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8 col-12">
-                            <div class="footer-social-icon text-right">
-                                <a class="active" href="#"><span class="fa fa-weibo"></span>Weibo</a>
-                                <a href="#"><span class="fa fa-wechat"></span>WeChat</a>
-                                <a href="#"><span class="fa fa-qq"></span>QQ</a>
-                                <a href="#"><span class="fa fa-envelope-o"></span>E-Mail</a>
+                            <div class="footer-social-icon text-right pb-70">
+                                <a class="fot-fb active pb-70" href="#"><i class="fa fa-weibo"></i> 微 博</a>
+                                <a class="fot-twitter pb-70" href="#"><i class="fa fa-weixin"></i> 微 信</a>
+                                <a class="fot-google pb-70" href="#"><i class="fa fa-qq"></i> QQ</a>
+                                <a class="fot-insta pb-70" href="#"><i class="fa fa-envelope-o"></i> 邮 箱</a>
                             </div>
                         </div>
                     </div>
-                    <div class="row"></div>
-                    <div class="copyright-area text-center">
+                    <div class="copyright-area copyright-area-02 mt-15 text-center pt-20 pb-20 ">
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="copyright-text">
-                                    <p>
-                                        Copyright © 2021 Loop All Rights Reserved
-                                    </p>
+                                    <p>Copyright © 2020 <a href="#">OneWay</a> All Rights Reserved.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
+
         </main>
+
+        <script src="__PUBLIC__/assets/js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="__PUBLIC__/assets/js/jQuery-3.5.0.js"></script>
+        <script src="__PUBLIC__/assets/js/popper.min.js"></script>
+        <script src="__PUBLIC__/jquery/bootstrap-4.2.1.js"></script>
+        <script src="__PUBLIC__/assets/js/owl.carousel.min.js"></script>
+        <script src="__PUBLIC__/assets/js/isotope.pkgd.min.js"></script>
+        <script src="__PUBLIC__/assets/js/slick.min.js"></script>
         <script src="__PUBLIC__/assets/js/metisMenu.min.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.meanmenu.min.js"></script>
+        <script src="__PUBLIC__/assets/js/ajax-form.js"></script>
+        <script src="__PUBLIC__/assets/js/wow.min.js"></script>
+        <script src="__PUBLIC__/assets/js/waypoints.min.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.counterup.min.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="__PUBLIC__/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.nice-select.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery.easypiechart.js"></script>
+        <script src="__PUBLIC__/assets/js/plugins.js"></script>
         <script src="__PUBLIC__/assets/js/main.js"></script>
     </body>
 </html>
