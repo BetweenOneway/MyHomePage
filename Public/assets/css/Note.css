@@ -1,15 +1,42 @@
 .wrapper {
     width:75%;
     margin:0 auto;
-    max-width:90em;
+    max-width:80em;
 }
 
 .blue-dark-bg {
-    background-color: #FAF1E6;
+    /*background-color: #FAF1E6;*/
 }
 
+/*拉开图标和文字之间的间隙*/
+.icon {
+    margin-right: 10px;
+}
+.navbar {
+    margin-bottom: 0;
+}
 .img-circle {
     border-radius: 50%;
+}
+
+.file-toolbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.file-oper-menu {
+    list-style: none;
+}
+
+.file-folder {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.file-oper {
+    display:block;
+    margin:10px auto;
+    min-height: 1em;
 }
 
 .new-file {
@@ -54,6 +81,18 @@
     background: #3EDBF0;
 }
 
+.input-file-name input {
+    padding-left:47px;
+    border:0;
+}
+
 .md-editor {
     position:relative;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:0;
+}
+/*去除编辑器底部空白*/
+.editormd {
+    margin-bottom:0;
 }
