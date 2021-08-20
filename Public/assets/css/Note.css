@@ -5,7 +5,7 @@
 }
 
 .blue-dark-bg {
-    /*background-color: #FAF1E6;*/
+    background-color: #FAF1E6;
 }
 
 /*拉开图标和文字之间的间隙*/
@@ -22,21 +22,15 @@
 .file-toolbar {
     padding-left: 0;
     padding-right: 0;
+    text-align:center;
+}
+.file-toolbar a {
+    text-decoration: none;
 }
 
 .file-oper-menu {
     list-style: none;
-}
-
-.file-folder {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.file-oper {
-    display:block;
-    margin:10px auto;
-    min-height: 1em;
+    margin:auto;
 }
 
 .new-file {
@@ -50,6 +44,10 @@
     display:block;
 }
 
+.file-folder {
+    padding-left: 0;
+    padding-right: 0;
+}
 .sidebar-nav a:hover {
     text-decoration: none;
 }
