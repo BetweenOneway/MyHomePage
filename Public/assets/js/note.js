@@ -4,7 +4,7 @@ $(function() {
     testEditor = editormd("test-editormd", {
         //width: "90%",
         height: 740,
-        path : '../editormd/lib/',//目录要存在不然会出现一直在加载的问题,指定的是lib路径
+        path : '__PUBLIC__/assets/editormd/lib/',//目录要存在不然会出现一直在加载的问题,指定的是lib路径
         toolbarIcons : function() {
             // Or return editormd.toolbarModes[name]; // full, simple, mini
             // Using "||" set icons align right.
