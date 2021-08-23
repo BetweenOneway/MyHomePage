@@ -4,7 +4,9 @@ $(function() {
     testEditor = editormd("test-editormd", {
         //width: "90%",
         height: 740,
-        path : '__PUBLIC__/assets/editormd/lib/',//目录要存在不然会出现一直在加载的问题,指定的是lib路径
+        //目录要存在不然会出现一直在加载的问题,指定的是lib路径
+        //这里的'/'表示网站的根目录
+        path : '/Public/assets/editormd/lib/',
         toolbarIcons : function() {
             // Or return editormd.toolbarModes[name]; // full, simple, mini
             // Using "||" set icons align right.
@@ -36,7 +38,7 @@ $(function() {
         //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
         imageUpload : true,
         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-        imageUploadURL : "./php/upload.php",
+        imageUploadURL : "/Uploads/Note",
         onload : function() {
             console.log('onload', this);
             this.show();

@@ -125,14 +125,14 @@
                 
                   <div class="col-xl-10 col-lg-10 col-md-10">
                     <div class="row title-edit-save">
-                      <div class="col-xl-8 col-lg-8 col-md-8 input-file-name">
-                        <input type="text" size="20" maxlength="20" placeholder="在这输入文件名" />
+                      <div class="col">
+                        <form class="form-inline">
+                          <input class="form-control col-xl-8 col-lg-8 col-md-8" type="text" placeholder="文件名">
+                          <button class="btn btn-outline-success col-xl-2 col-lg-2 col-md-2" type="submit">预览</button>
+                          <button class="btn btn-outline-success col-xl-2 col-lg-2 col-md-2" type="submit">保存</button>
+                        </form>
                       </div>
-                      <div class="col-xl-4 col-lg-4 col-md-4 pull-right">
-                        <a href="#" id="previewMarkdownBtn" class="btn btn-primary btn-xs">预览</a>
-                        <a href="#" id="saveMarkdownBtn" class="btn btn-primary btn-xs">保存</a>
-                      </div>
-                      
+
                     </div>
                     <div class="row ">
                       <!--编辑器-->
