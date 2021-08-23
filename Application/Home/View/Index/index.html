@@ -18,129 +18,34 @@
         <link rel="stylesheet" href="__PUBLIC__/assets/css/meanmenu.css">
         <link rel="stylesheet" href="__PUBLIC__/assets/css/slick.css">
         <link rel="stylesheet" href="__PUBLIC__/assets/css/home.css">
+
+        <script src="__PUBLIC__/assets/js/jQuery-3.5.1.js"></script>
+        <script src="__PUBLIC__/assets/js/bootstrap.bundle.js"></script>
+        <script src="__PUBLIC__/assets/js/bootstrap.js"></script>
     </head>
     <body>
         <header class="header-transparent header-transparent-02">
             <div id="sticky-header" class="main-menu-area menu-padding pl-55 pr-55">
-                <div class="container custom-container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-6 col-md-11 col-9">
-                            <div class="logo">
-                                <a class="img-fluid" href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt="" /></a>
-                            </div>
+                <div class="container-fluid custom-container">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="img-fluid" href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt="" /></a>
+                        <!--小屏幕下的汉堡菜单-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <!--菜单项-->                            
+                            </ul>
+                            <a class="c-btn btn-round mr-10" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
+                            <a class="c-btn btn-round active" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
                         </div>
-                        <!--这里的col-lg-6实际上没啥用了，因为只有xl的才会显示-->
-                        <div class="col-xl-6 col-lg-6 d-none d-xl-block">
-                            <div class="main-menu main-menu-02 text-center">
-                                <nav id="mobile-menu">
-                                    <ul>
-                                        <li class="active"><a href="index.html"></a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-1 col-3">
-                            <div class="header-02-right d-lg-flex align-items-center justify-content-between">
-                                <!--这里原来有个header-sign类没啥效果-->
-                                <div class="d-none d-lg-block">
-                                    <a class="c-btn btn-round mr-10" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
-                                    <a class="c-btn btn-round active" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
-                                </div>
-                                <!--小屏幕下的菜单栏显示 汉堡包-->
-                                <div class="hamburger-menu d-xl-none d-lg-inline-block">
-                                    <a href="#"><img src="__PUBLIC__/assets/img/icon/bar.png" alt=""></a>
-                                </div>
-                        </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </header>
-        <!--side-bar的显示控制是通过position+right来控制的，默认情况下side-bar会在据右侧-370px处，又是aside标签，根本不会显示-->
-        <!--当点击了hambeger menu之后会给aside标签新增一个show 组合效果就是使right=0-->
-        <!--移动菜单项不能在container之内，否则没有从屏幕右侧出现的感觉，会有点突兀-->
-        <aside class="slide-bar">
-            <!--关闭按钮-->
-            <div class="close-mobile-menu">
-                <a href="javascript:void(0);"><i class="fa fa-times"></i></a>
-            </div>
-            <!--没理解为什么要有这个，只有在点击了hambeger menu之后屏幕变宽才会显示-->
-            <!--
-            <div class="offset-sidebar">
-                <div class="offset-widget offset-logo mb-30">
-                    <a href="index.html">
-                        <img src="assets/img/logo/logo-02.png" alt="logo">
-                    </a>
-                </div>
-                <div class="offset-widget mb-40">
-                    <div class="info-widget">
-                        <h4 class="offset-title mb-20">About Us</h4>
-                        <p class="mb-30">
-                        But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-                        was born and will give you a complete account of the system and expound the actual teachings of
-                        the great explore
-                        </p>
-                        <a class="c-btn btn-round-02" href="contact.html">Contact Us</a>
-                    </div>
-                </div>
-                <div class="offset-widget mb-30 pr-10">
-                    <div class="info-widget info-widget2">
-                        <h4 class="offset-title mb-20">Contact Info</h4>
-                        <p> <i class="fa fa-address-book"></i> 23/A, Miranda City Likaoli Prikano, Dope</p>
-                        <p> <i class="fa fa-phone"></i> +0989 7876 9865 9 </p>
-                        <p> <i class="fa fa-envelope-open"></i> info@example.com </p>
-                    </div>
-                </div>
-            </div>
-            -->
-            <!--side-mobile-menu默认的display=none，只有在一定的屏幕宽度下才显示，通过媒体查询控制-->
-            <!--通过MetisMenu 实现-->
-            <nav class="side-mobile-menu">
-                <ul id="mobile-menu-active">
-                    <li class="has-dropdown">
-                        <a href="index.html">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Style 1</a></li>
-                            <li><a href="index-2.html">Home Style 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown"><a href="#">Courses</a>
-                        <ul class="sub-menu">
-                            <li><a href="courses.html">Course</a>
-                            <li><a href="courses -2.html">Course List</a>
-                            <li><a href="courses-details.html">Course Details</a>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Events</a>
-                        <ul class="sub-menu">
-                            <li><a href="events.html">Events List</a></li>
-                            <li><a href="events-details.html">Events Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown"><a href="#">Blogs</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                            <li><a href="blog-side.html">Blog Sidebar</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contacts</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <!--实现当side-mobile-menu显示的时候，点击空白处关闭menu的功能-->
-        <div class="body-overlay"></div>
-
+        
         <main>
             <section class="hero-area hero-02-area pos-rel blue-dark-bg">
                 <div class="slider-img d-none d-md-block">
