@@ -1,215 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Bootstrap 实例</title>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>OneWay - My dream set sail from here</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="__PUBLIC__/assets/img/favicon.ico">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/animate.min.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/nice-select.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.css"> 
         <link rel="stylesheet" href="__PUBLIC__/assets/css/font-awesome.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/themify-icons.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/metisMenu.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/meanmenu.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/slick.css">
-        <link rel="stylesheet" href="__PUBLIC__/assets/css/home.css">
+        <link rel="stylesheet" href="__PUBLIC__/assets/css/home.css"> 
 
-        <script src="__PUBLIC__/assets/js/jQuery-3.5.1.js"></script>
-        <script src="__PUBLIC__/assets/js/bootstrap.bundle.js"></script>
+        <script src="__PUBLIC__/assets/js/jquery-3.5.1.js"></script>
         <script src="__PUBLIC__/assets/js/bootstrap.js"></script>
     </head>
     <body>
-        <header class="header-transparent header-transparent-02">
-            <div id="sticky-header" class="main-menu-area menu-padding pl-55 pr-55">
-                <div class="container-fluid custom-container">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="img-fluid" href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt="" /></a>
-                        <!--小屏幕下的汉堡菜单-->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <!--菜单项-->                            
-                            </ul>
-                            <a class="c-btn btn-round mr-10" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
-                            <a class="c-btn btn-round active" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#">OneWay</a>
+            <!--小屏幕下的汉堡菜单-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         
-        <main>
-            <section class="hero-area hero-02-area pos-rel blue-dark-bg">
-                <div class="slider-img d-none d-md-block">
-                    <img class="img-fluid" src="__PUBLIC__/assets/img/slider/slider2.png" alt="">
-                </div>
-
-                <div class="hero-slider">
-                    <div class="slider-actives">
-                        <div class="single-slider slider-height slider-height-02 d-flex align-items-center">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-9">
-                                        <div class="hero-content hero-02-content mt-80">
-                                            <div class="hero-slider-caption">
-                                                <ul class="catlist ml-10">
-                                                    <li><a href="#">Imagine it</a></li>
-                                                    <li><a href="#">Make it</a></li>
-                                                    <li><a href="#">Optimize it</a></li>
-                                                </ul>
-                                                <h2 data-animation="fadeInUp" data-delay=".7s">在线云笔记</h2>
-                                                <p>点滴记录美好生活</p>
-                                                <a class="c-btn btn-round-02" href="{:U('Note/Index/index')}">开 始 <i class="fa fa-long-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">云笔记</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">导航</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">爬虫</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            开发中
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">有限圈子</a>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--Popular Categories-->
-            <div class="course-cat-area-02 blue-dark-bg2 pt-65 pb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                            <div class="section-title section-title-white text-center mb-85">
-                                <h2>Function Categories</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row no-gutters cat-row">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="cat-wrapper-02">
-                                <!--鼠标经过时的背景图片-->
-                                <div class="course-cat-img">
-                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
-                                </div>
-                                <!--course内容 非鼠标经过情况下的显示-->
-                                <div class="course-cat-text course-cat-02-text text-center">
-                                    <div class="course-icon mb-25">
-                                        <i class="fa fa-paint-brush"></i>
-                                    </div>
-                                    <h4><a href="{:U('Note/Index/index')}">云 笔 记</a></h4>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn" href="{:U('Note/Index/index')}"><i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="cat-wrapper-02">
-                                <div class="course-cat-img">
-                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
-                                </div>
-                                <div class="course-cat-text course-cat-02-text text-center">
-                                    <div class="course-icon mb-25">
-                                        <i class="fa fa-compass"></i>
-                                    </div>
-                                    <h4><a href="{:U('Navgator/Index/index')}">导 航</a></h4>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn" href="{:U('Navgator/Index/index')}"><i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="cat-wrapper-02">
-                                <div class="course-cat-img">
-                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
-                                </div>
-                                <div class="course-cat-text course-cat-02-text text-center">
-                                    <div class="course-icon mb-25">
-                                        <i class="fa fa-bug"></i>
-                                    </div>
-                                    <h4><a href="">爬 虫</a></h4>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="cat-wrapper-02">
-                                <div class="course-cat-img">
-                                    <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
-                                </div>
-                                <div class="course-cat-text course-cat-02-text text-center">
-                                    <div class="course-icon mb-25">
-                                        <i class="fa fa-code"></i>
-                                    </div>
-                                    <h4><a href="">开 发 中</a></h4>
-                                    <div class="course-arrow-btn">
-                                        <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
+                    <a class="btn btn-outline-success mr-sm-2 my-2 my-sm-0" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
+            </div>
+        </nav>
+        <div class="category-area">
+          <div class="container">
+            <div class="row no-gutters">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                  <div class="category-wrapper">
+                      <!--鼠标经过时的背景图片-->
+                      <div class="mouse-over-img">
+                          <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                      </div>
+                      <!--course内容 非鼠标经过情况下的显示-->
+                      <div class="course-cat-text course-cat-02-text text-center">
+                          <div class="course-icon mb-25">
+                              <i class="fa fa-paint-brush"></i>
+                          </div>
+                          <h4><a href="{:U('Note/Index/index')}">云 笔 记</a></h4>
+                          <div class="course-arrow-btn">
+                              <a class="arrow-btn" href="{:U('Note/Index/index')}"><i class="fa fa-long-arrow-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                  <div class="category-wrapper">
+                      <div class="mouse-over-img">
+                          <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                      </div>
+                      <div class="course-cat-text course-cat-02-text text-center">
+                          <div class="course-icon mb-25">
+                              <i class="fa fa-compass"></i>
+                          </div>
+                          <h4><a href="{:U('Navgator/Index/index')}">导 航</a></h4>
+                          <div class="course-arrow-btn">
+                              <a class="arrow-btn" href="{:U('Navgator/Index/index')}"><i class="fa fa-long-arrow-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                  <div class="category-wrapper">
+                      <div class="mouse-over-img">
+                          <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                      </div>
+                      <div class="course-cat-text course-cat-02-text text-center">
+                          <div class="course-icon mb-25">
+                              <i class="fa fa-bug"></i>
+                          </div>
+                          <h4><a href="">爬 虫</a></h4>
+                          <div class="course-arrow-btn">
+                              <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                  <div class="category-wrapper">
+                      <div class="mouse-over-img">
+                          <a href=""><img src="__PUBLIC__/assets/img/course/c-03.png" alt=""></a>
+                      </div>
+                      <div class="course-cat-text course-cat-02-text text-center">
+                          <div class="course-icon mb-25">
+                              <i class="fa fa-code"></i>
+                          </div>
+                          <h4><a href="">开 发 中</a></h4>
+                          <div class="course-arrow-btn">
+                              <a class="arrow-btn" href="#"><i class="fa fa-long-arrow-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </div>
 
-            <!--页脚-->
-            <footer class="footer-area pt-65 pb-45 blue-soft-bg3">
-                <div class="container">
-                    <div class="row mb-20 no-gutters align-items-center">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-12">
-                            <div class="footer-logo">
-                                <a href="#"><img src="__PUBLIC__/assets/img/logo/footer-01-logo.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-12">
-                            <div class="footer-social-icon text-right pb-70">
-                                <a class="fot-fb active pb-70" href="#"><i class="fa fa-weibo"></i> 微 博</a>
-                                <a class="fot-twitter pb-70" href="#"><i class="fa fa-weixin"></i> 微 信</a>
-                                <a class="fot-google pb-70" href="#"><i class="fa fa-qq"></i> QQ</a>
-                                <a class="fot-insta pb-70" href="#"><i class="fa fa-envelope-o"></i> 邮 箱</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="copyright-area copyright-area-02 mt-15 text-center pt-20 pb-20 ">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="copyright-text">
-                                    <p>Copyright © 2020 <a href="#">OneWay</a> All Rights Reserved.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-        </main>
-
-        <script src="__PUBLIC__/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jQuery-3.5.0.js"></script>
-        <script src="__PUBLIC__/assets/js/popper.min.js"></script>
-        <script src="__PUBLIC__/assets/js/bootstrap.js"></script>
-        <script src="__PUBLIC__/assets/js/owl.carousel.min.js"></script>
-        <script src="__PUBLIC__/assets/js/isotope.pkgd.min.js"></script>
-        <script src="__PUBLIC__/assets/js/slick.min.js"></script>
-        <script src="__PUBLIC__/assets/js/metisMenu.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.meanmenu.min.js"></script>
-        <script src="__PUBLIC__/assets/js/ajax-form.js"></script>
-        <script src="__PUBLIC__/assets/js/wow.min.js"></script>
-        <script src="__PUBLIC__/assets/js/waypoints.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.counterup.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.scrollUp.min.js"></script>
-        <script src="__PUBLIC__/assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.nice-select.js"></script>
-        <script src="__PUBLIC__/assets/js/jquery.easypiechart.js"></script>
-        <script src="__PUBLIC__/assets/js/plugins.js"></script>
-        <script src="__PUBLIC__/assets/js/main.js"></script>
+          </div>
+        </div>
+        
     </body>
 </html>
