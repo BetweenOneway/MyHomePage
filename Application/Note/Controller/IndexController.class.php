@@ -10,7 +10,7 @@ class IndexController extends Controller {
         $admin_username = session('admin_username');
         if(!isset($admin_id) || !isset($admin_username))
         {
-            $this->redirect('Admin/Public/login', 5,'你尚未登录，跳转到登录页面。。。');
+            $this->redirect('Admin/Public/login', array(),1,'你尚未登录，即将跳转到登录页面。。。');
         }
     }
 
