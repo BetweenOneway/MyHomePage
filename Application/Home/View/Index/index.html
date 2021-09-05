@@ -42,8 +42,25 @@
                         </div>
                     </li>
                 </ul>
+                <eq name="Think.session.admin_username" value="">
                     <a class="btn btn-outline-success mr-sm-2 my-2 my-sm-0" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
                     <a class="btn btn-outline-success my-2 my-sm-0" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
+                <else/>
+                    <div class="dropdown login-user">
+                        <span>
+                            <img alt="image" class="img-circle" height="40px" src="__PUBLIC__/images/profile_small.jpg" />
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="">
+                            <span class="username"> 
+                                <span class="block m-t-xs"> <strong class="font-bold">{$Think.session.admin_username}</strong><b class="caret"></b></span>   
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{:U('Admin/Index/changePassword')}">修改密码</a>
+                            <a class="dropdown-item"href="{:U('Admin/Public/logout')}">安全退出</a>
+                        </div>
+                    </div>
+                </eq>
             </div>
         </nav>
         <div class="category-area">

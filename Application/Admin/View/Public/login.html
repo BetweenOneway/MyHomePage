@@ -67,7 +67,8 @@
                         if(0 == res.status)
                         {
                             layer.msg(res.message,{time:1000},function(){
-                                window.location.href="{:U('Index/index')}";
+                                //跳转到首页
+                                window.location.href="{:U('Home/Index/index')}";
                             })
                         }
                         else

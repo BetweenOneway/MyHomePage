@@ -133,3 +133,26 @@
     -o-transition:all .4s ease-out 0s;
     transition:all .4s ease-out 0s;
 }
+
+/*增加定位，下拉菜单是absolute定位*/
+.login-user {
+    position:relative;
+}
+
+.login-user a:hover {
+    text-decoration: none;
+}
+
+.login-user a:hover .username {
+    color:#FFF;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+/*因为靠近界面右侧，所以让下拉菜单靠左显示，避免超出页面范围*/
+.login-user .dropdown-menu {
+    left:auto;
+    right:0;
+}
