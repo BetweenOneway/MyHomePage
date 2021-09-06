@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/bootstrap.css" />
         <!--此处font-awesome.css需要在editormd.css之前-->
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/font-awesome.css" />
-        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/editormd.css"/>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/editormd/css/editormd.css"/>
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/metisMenu.css" />
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/assets/css/note.css" />
         
@@ -126,11 +126,12 @@
                   <div class="col-xl-10 col-lg-10 col-md-10">
                     <div class="row title-edit-save">
                       <div class="col">
-                        <form class="form-inline">
-                          <input class="form-control col-xl-8 col-lg-8 col-md-8" type="text" placeholder="文件名">
-                          <button class="btn btn-outline-success col-xl-2 col-lg-2 col-md-2" id="previewMarkdownBtn" type="submit">预览</button>
-                          <button class="btn btn-outline-success col-xl-2 col-lg-2 col-md-2" id="saveMarkdownBtn" type="submit">保存</button>
+                        <form id="fileOperForm" name="fileOperForm" method="POST" class="form-inline">
+                          <input name="fileName" class="form-control col-xl-9 col-lg-9 col-md-9" type="text" placeholder="文件名">
+                          <button class="btn btn-outline-success col-xl-1 col-lg-1 col-md-1 button" id="saveMarkdownBtn" type="submit">保存</button>
+                          <button class="btn btn-outline-success col-xl-1 col-lg-1 col-md-1 button" id="previewMarkdownBtn">预览</button>
                         </form>
+                        
                       </div>
 
                     </div>

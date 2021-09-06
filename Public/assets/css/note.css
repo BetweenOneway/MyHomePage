@@ -85,12 +85,23 @@
     border:0;
 }
 
+.title-edit-save 
+{
+    margin:10px 5px;
+}
+
+.button {
+    margin-left:5px;
+    margin-right:5px;
+}
+
 .md-editor {
     position:relative;
     padding-left:0;
     padding-right:0;
     padding-bottom:0;
 }
+
 /*去除编辑器底部空白*/
 .editormd {
     margin-bottom:0;
