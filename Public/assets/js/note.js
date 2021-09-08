@@ -57,13 +57,7 @@ $(function() {
 
     $("#previewMarkdownBtn").bind("click", function(){
         testEditor.previewing();
-    });
-    /*
-    $("#saveMarkdownBtn").bind("click", function(){
-        alert(testEditor.getMarkdown());
-    });
-    */
-    
+    });    
 });
 
 
