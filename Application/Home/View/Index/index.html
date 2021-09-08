@@ -42,6 +42,7 @@
                         </div>
                     </li>
                 </ul>
+                <!--根据用户是否登录显示不同内容-->
                 <eq name="Think.session.admin_username" value="">
                     <a class="btn btn-outline-success mr-sm-2 my-2 my-sm-0" href="{:U('Admin/Public/login')}">登 录 <i class="fa fa-user-circle"></i></a>
                     <a class="btn btn-outline-success my-2 my-sm-0" href="{:U('Admin/Public/login')}">注 册 <i class="fa fa-user-circle"></i></a>
@@ -56,6 +57,7 @@
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{:U('Admin/Index/index')}">管理台</a>
                             <a class="dropdown-item" href="{:U('Admin/Index/changePassword')}">修改密码</a>
                             <a class="dropdown-item"href="{:U('Admin/Public/logout')}">安全退出</a>
                         </div>
