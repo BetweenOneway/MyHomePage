@@ -1,6 +1,8 @@
 var testEditor;
 
 $(function() {
+    $('#menu1').metisMenu();
+
     testEditor = editormd("test-editormd", {
         //width: "90%",
         height: 740,
@@ -61,34 +63,10 @@ $(function() {
         alert(testEditor.getMarkdown());
     });
     */
+    
 });
 
-$('fileOperForm').submit(function(){
-    var fileName = $("input[name='fileName']").val();
-    var fileContent = testEditor.getMarkdown();
 
-    var date = new Date();
-    var modifyDate = date.getFullYear+'/'+(date.getMonth+1)+'/'+date.getDate()+' '
-    var modifyTime = date.getHours+'/'+date.getMinutes+'/'+date.getSeconds;
-    
-    var url="{:U('saveFile')}";//$(this).attr('action');
-    $.ajax({
-        type:"post",
-        url:url,
-        data:{fileName:fileName,fileContent:fileContent},
-        success:function(res){
-            if(0 == res.status)
-            {
-                layer.msg(res.message,{time:1000});
-            }
-            else
-            {
-                layer.msg(res.message,{time:2000});
-            }//else
-        }//success
-    });//ajax
-    return false;
-});//submit
 
 function loadEditorMd(recentFile)
 {}

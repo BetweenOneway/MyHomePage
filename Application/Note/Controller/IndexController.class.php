@@ -17,8 +17,16 @@ class IndexController extends Controller {
     public function index(){
         $this->display();
     }
+    
     public function saveFile()
     {
-        
+        $fileName =I('fileName');
+        $fileContent =I('fileContent');
+        $modifyDate =I('modifyDate');
+
+        $res['status']=0;
+        $res['message']="收到存储文件内容";
+
+        $this->ajaxReturn($res);
     }
 }
