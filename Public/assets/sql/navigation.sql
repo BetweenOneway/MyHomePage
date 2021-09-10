@@ -250,3 +250,16 @@ INSERT INTO `nav_middle_level` VALUES ('78', '手球', '0', '1', '19');
 INSERT INTO `nav_middle_level` VALUES ('79', '垒球', '0', '1', '19');
 INSERT INTO `nav_middle_level` VALUES ('80', '曲棍球', '0', '1', '19');
 INSERT INTO `nav_middle_level` VALUES ('81', '冰球', '0', '1', '19');
+
+
+create table fileInfo 
+(
+uid int(10) unsigned comment '用户id',
+fileName varchar(50) not null comment '文件名',
+type int(2) unsigned comment '文件类型 0 文件夹 1 md文件',
+level int(2) unsigned comment '目录层级 从0开始',
+content mediumtext comment '文件内容 文件夹类型为空',
+createTime datetime not null comment '创建时间',
+modifyTime datetime not null comment '修改时间',
+primary key(uid,fileName,type,level)
+)
