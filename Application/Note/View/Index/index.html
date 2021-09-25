@@ -117,6 +117,36 @@
         return false;
       });//submit
 
+        //自己自定义图标，点这个图标出现contextmenu
+        var moreTools = document.createElement('a');
+        moreTools.className = "jstree-contextmenubtn btn btn-ssm btn-icon";
+        $(moreTools).append($("<i class='fa fa-plus-square'></i>"))
+        
+        //根据函数创建了新的对象，并且提供了bind/teardown/redraw_node方法
+        $.jstree.plugins.contextmenubtn = function (_, parent) {
+            this.bind = function () {
+                parent.bind.call(this);
+                this.element
+                    .on("click.jstree", ".jstree-contextmenubtn", $.proxy(function (e) {
+                        e.stopImmediatePropagation();
+                        $(e.target).closest('.jstree-node').children('.jstree-anchor').trigger('contextmenu');
+                    }, this));
+            };
+            //拆卸
+            this.teardown = function () {
+                this.element.find(".jstree-contextmenubtn").remove();
+                parent.teardown.call(this);
+            };
+            this.redraw_node = function (obj, deep, callback, force_draw) {
+                obj = parent.redraw_node.call(this, obj, deep, callback, force_draw);
+                if (obj) {
+                    var tmp = moreTools.cloneNode(true);
+                    obj.insertBefore(tmp, obj.childNodes[2]);
+                }
+                return obj;
+            };
+        };
+
         $('#jstree').jstree({
           'core' : {
             'data' : {
@@ -126,8 +156,119 @@
                     return { "id" : node.id };
               }
             }
-          }
+          },
+          "contextmenu":{
+            "items":{
+                "create":null,
+                "rename":null,
+                "remove":null,
+                "ccp":null,
+                "新建菜单":{
+                　　"label":"新建菜单",
+                　　"action":function(data){
+                    　　var inst = jQuery.jstree.reference(data.reference),
+                    　　obj = inst.get_node(data.reference);
+                    　　console.log({"title":"新建“"+obj.text+"”的子菜单",url:"/accountmanage/createMenu?id="+obj.id,height:280,width:400});
+                    }
+                },
+                "删除菜单":{
+                    "label":"删除菜单",
+                    "action":deleteItem
+                },
+                "编辑菜单":{
+                    "label":"编辑菜单",
+                        "action":function(data){
+                        var inst = jQuery.jstree.reference(data.reference),
+                            obj = inst.get_node(data.reference);
+                        dialog.show({"title":"编辑“"+obj.text+"”菜单",url:"/accountmanage/editMenu?id="+obj.id,height:280,width:400});
+                    }
+                }
+            }
+        },
+          "plugins" : ["contextmenubtn","contextmenu", "dnd", "massload", "search", "sort", "state", "types", "unique", "wholerow", "changed", "conditionalselect" ]
         });
+        function deleteItem()
+        {
+            console.log("click delete menu item");
+        }
+        
+        function create(){
+            //传参为true 表示获取一个已经存在的tree
+            var ref = $('#jstree1').jstree(true);
+            var currNode = _getCurrNode();
+            currNode = ref.create_node(currNode, {"type":"file"});
+            if(currNode) {
+                ref.edit(currNode);
+            }
+        }
+            
+        function rename(){
+            var ref = $('#jstree1').jstree(true);
+            var currNode = _getCurrNode();
+            ref.rename_node(currNode,"rename node222");
+        }
+        
+        function del(){
+            var ref = $('#jstree1').jstree(true);
+            var currNode = _getCurrNode();
+            ref.delete_node(currNode);
+        }
+        
+        function moveup(){
+            var ref = $('#jstree1').jstree(true);
+            var currNode = _getCurrNode();
+            var prevNode = ref.get_prev_dom(currNode,true);
+            ref.move_node(currNode,prevNode,'before');
+        }
+        
+        function movedown(){
+            var ref = $('#jstree1').jstree(true);
+            var currNode = _getCurrNode();
+            var nextNode = ref.get_next_dom(currNode,true);//返回兄弟节点的下一个节点
+            ref.move_node(currNode,nextNode,'after');
+        }
+        
+        /**
+        *	获取当前所选中的结点
+        */
+        function _getCurrNode(){
+            var ref = $('#jstree1').jstree(true),
+            sel = ref.get_selected();
+            console.log(sel);
+            if(!sel.length) { 
+                console.log("----");
+                return false; 
+            }
+            sel = sel[0];
+            return sel;
+        }
+
+        function createJsTree()
+        {
+            
+            var text = '{"id":"0","parent":"#","state":{"disabled":false,"opened":true,"selected":false},"text":"夏宇信息"},'+
+                        '{"id":"69","parent":"0","icon" : "fa fa-file-pdf-o","text":"工程"},'+
+                        '{"id":"5","parent":"0","text":"行政"},'+
+                        '{"id":"71","parent":"0","text":"迷"},'+
+                        '{"id":"1","parent":"0","text":"技术"}';
+                        
+                        /*
+            var text = '{ "employees" : [' +
+                        '{ "firstName":"Bill" , "lastName":"Gates" },' +
+                        '{ "firstName":"Steve" , "lastName":"Jobs" },' +
+                        '{ "firstName":"Alan" , "lastName":"Turing" } ]}';
+                        */
+            //$('#jstree2').jstree(text);  
+            var str = $("#jstree1").jstree(true).get_json();
+            $('#jstree2').jstree({   //生成新树
+            'core' : {
+            'data' : str
+            }});
+            console.log("create js tree");
+            var str1 = JSON.stringify(str);
+            console.log(str1);
+            //$('#jstree2').jstree.defaults.core.data(text);                          
+        }
       </script>
     </body>
 </html>
