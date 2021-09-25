@@ -50,7 +50,7 @@ a {
     color: #1C1C1C;
     text-decoration: none;
 }
-a: hover {
+a:hover {
     color: #f30;
     text-decoration: underline;
 }
@@ -125,11 +125,11 @@ b.space {
 .clearfix {
     zoom: 1;
 }
-.clearfix: before,.clearfix: after {
+.clearfix:before,.clearfix:after {
     content: "";
     display: table;
 }
-.clearfix: after {
+.clearfix:after {
     clear: both;
 }
 .corner b {
@@ -330,7 +330,7 @@ b.space {
     height: 100%;
     vertical-align: middle;
 }
-.box-weather_city .change-city a .cityName,.box-weather_city .change-city a: link .cityName,.box-weather_city .change-city a: visited .cityName {
+.box-weather_city .change-city a .cityName,.box-weather_city .change-city a:link .cityName,.box-weather_city .change-city a:visited .cityName {
     width: 24px;
     width: auto!important;
     max-width: 52px;
@@ -347,7 +347,7 @@ b.space {
     width: 15px;
     background: url(images/edit.png) no-repeat right 5px;
 }
-.box-weather_city .change-city a: hover .city_edit {
+.box-weather_city .change-city a:hover .city_edit {
     background: url(images/edit.png) no-repeat right -32px;
 }
 .box-weather_info {
@@ -360,7 +360,7 @@ b.space {
     cursor: pointer;
     zoom: 1;
 }
-.box-weather_info a: hover p {
+.box-weather_info a:hover p {
     text-decoration: underline;
 }
 .box-weather_info_item {
@@ -425,12 +425,12 @@ b.space {
 .box-date_ymd {
     margin-top: 3px;
 }
-.box-date a: hover {
+.box-date a:hover {
     border: none;
     text-decoration: none;
     color: #1C1C1C;
 }
-.box-date a: hover * {
+.box-date a:hover * {
     text-decoration: underline;
     color: #1C1C1C;
 }
@@ -476,7 +476,7 @@ b.space {
     height: 28px;
     margin-right: -1px;
 }
-.box-search_tabs a: hover {
+.box-search_tabs a:hover {
     text-decoration: none;
     color: #1C1C1C;
 }
@@ -610,7 +610,7 @@ b.space {
     zoom: 1;
     display: block;
 }
-.box-search_more_wrap a: hover {
+.box-search_more_wrap a:hover {
     background: #E2EAFF;
     color: #1C1C1C;
     font-weight: bold;
@@ -635,7 +635,7 @@ b.space {
     position: absolute;
     bottom: 5px;
     white-space: nowrap;
-    font: normal 12px/1.231 ËÎÌå!important;
+    font: normal 12px/1.231 ï¿½ï¿½ï¿½ï¿½!important;
     margin-left: 15px;
 }
 .box-hotword span {
@@ -710,7 +710,7 @@ b.space {
     padding-top: 7px;
 }
 .box-hotspot li a {
-    font-family: ËÎÌå;
+    font-family: ï¿½ï¿½ï¿½ï¿½;
 }
 .box-hotspot .box-sidebar_title {
     color: #498949;
@@ -744,7 +744,7 @@ b.space {
     font-size: 12px;
     color: #666;
 }
-.box-starbar acronym a: hover {
+.box-starbar acronym a:hover {
     color: #f30;
 }
 .box-hot {
@@ -804,7 +804,7 @@ b.space {
 .box-sort_title a {
     color: #108410;
 }
-.box-sort_title a: hover {
+.box-sort_title a:hover {
     color: #f30;
 }
 .box-sort_content .box-sort_more {
@@ -917,7 +917,7 @@ span.box-about_first {
     vertical-align: top;
     _vertical-align: baseline;
 }
-.box-copyright a,.box-copyright a: hover,.box-about a,.box-about a: hover {
+.box-copyright a,.box-copyright a:hover,.box-about a,.box-about a: hover {
     color: #1C1C1C;
 }
 .box-mail {
@@ -1025,7 +1025,7 @@ span.box-about_first {
     zoom: 1;
     display: block;
 }
-.box-mail_layer a: hover {
+.box-mail_layer a:hover {
     color: #1C1C1C;
     text-decoration: none;
 }
