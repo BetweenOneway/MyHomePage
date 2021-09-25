@@ -1,5 +1,5 @@
 <?php
-namespace Home\Controller;
+namespace Navgator\Controller;
 use Think\Controller;
 
 class IndexController extends Controller{

@@ -75,7 +75,8 @@ class PublicController extends Controller
     {
         session('admin_id',null);
         session('admin_username',null);
-        $this->redirect("login");
+        //退出后返回主页
+        $this->redirect("Home/Index/index");
     }
     //生成验证码
     public function verify()
